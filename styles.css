@@ -1,0 +1,83 @@
+@import url(styles/body/body.css);
+@import url(styles/img/img.css);
+@import url(styles/redirect/-button/redirect-button.css);
+@import url(styles/menu/-section/menu-section.css);
+@import url(styles/menu/-item/menu-item.css);
+@import url(styles/menu/-text/menu-text.css);
+@import url(styles/menu/-button/menu-button.css);
+@import url(styles/menu/-container/menu-container.css);
+@import url(styles/menu/-card/menu-card.css);
+@import url(styles/menu/-title/menu-title.css);
+@import url(styles/menu/-description/menu-description.css);
+@import url(styles/menu/-details/menu-details.css);
+@import url(styles/menu/-footer/menu-footer.css);
+@import url(styles/menu/-price/menu-price.css);
+@import url(styles/label/label.css);
+@import url(styles/input/input.css);
+@import url(styles/button/button.css);
+@import url(styles/header/-menu/header-menu.css);
+@import url(styles/navbar/-brand/navbar-brand.css);
+@import url(styles/filter/-container/filter-container.css);
+@import url(styles/navbar/-dropdown/navbar-dropdown.css);
+@import url(styles/a/a.css);
+@import url(styles/mbr/-white/mbr-white.css);
+@import url(styles/mbr/-black/mbr-black.css);
+@import url(styles/mbr/-light/mbr-light.css);
+@import url(styles/mbr/-regular/mbr-regular.css);
+@import url(styles/mbr/-semibold/mbr-semibold.css);
+@import url(styles/mbr/-bold/mbr-bold.css);
+@import url(styles/mbr/-figure/mbr-figure.css);
+@import url(styles/mbr/-section/mbr-section-btn.css);
+@import url(styles/btn/btn.css);
+@import url(styles/btn/-sm/btn-sm.css);
+@import url(styles/btn/-md/btn-md.css);
+@import url(styles/btn/-lg/btn-lg.css);
+@import url(styles/btn/-form/btn-form.css);
+@import url(styles/nav/nav.css);
+@import url(styles/mbr/-fullscreen/mbr-fullscreen.css);
+@import url(styles/menu/menu.css);
+@import url(styles/form/form-control.css);
+@import url(styles/modal/modal.css);
+@import url(styles/modal/-content/modal-content.css);
+@import url(styles/close/close-btn.css);
+@import url(styles/jarallax/jarallax.css);
+@import url(styles/cid/cid.css);
+
+:root{--background: #FFEEE6; --background-dark: #50250E; --dominant-color: #FB5607; --dominant-dark-color: #613029; --dominant-darken-color: #C01C00; --dominant-light-color: #D5C0B1; --dominant-lighten-color: #FF893F; --primary-color: #FFBE0B; --primary-dark-color: #522612; --primary-darken-color: #C78E00; --primary-light-color: #E5E0C8; --primary-lighten-color: #FFF051; --secondary-color: #8338EC; --secondary-dark-color: #3F3762; --secondary-darken-color: #4A00B8; --secondary-light-color: #E2D1E3; --secondary-lighten-color: #B969FF; --success-color: #22B571; --success-dark-color: #1F421F; --success-darken-color: #008445; --success-light-color: #D1E9DA; --success-lighten-color: #63E8A0; --danger-color: #B7202E; --danger-dark-color: #5C2C25; --danger-darken-color: #800006; --danger-light-color: #DEC2C0; --danger-lighten-color: #EF5857; --warning-color: #D7A100; --warning-dark-color: #51270C; --warning-darken-color: #A17300; --warning-light-color: #E8E2CA; --warning-lighten-color: #FFD247; --info-color: #0BACCC; --info-dark-color: #043E5A; --info-darken-color: #007C9B; --info-light-color: #CEEDED; --info-lighten-color: #61DEFF; --background-text: #000000; --background-dark-text: #FFFFFF; --dominant-text: #FFFFFF; --dominant-dark-text: #FFFFFF; --dominant-darken-text: #FFFFFF; --dominant-light-text: #000000; --dominant-lighten-text: #000000; --primary-text: #000000; --primary-dark-text: #FFFFFF; --primary-darken-text: #000000; --primary-light-text: #000000; --primary-lighten-text: #000000; --secondary-text: #FFFFFF; --secondary-dark-text: #FFFFFF; --secondary-darken-text: #FFFFFF; --secondary-light-text: #000000; --secondary-lighten-text: #000000; --success-text: #FFFFFF; --success-dark-text: #FFFFFF; --success-darken-text: #FFFFFF; --success-light-text: #000000; --success-lighten-text: #000000; --danger-text: #FFFFFF; --danger-dark-text: #FFFFFF; --danger-darken-text: #FFFFFF; --danger-light-text: #000000; --danger-lighten-text: #FFFFFF; --warning-text: #000000; --warning-dark-text: #FFFFFF; --warning-darken-text: #FFFFFF; --warning-light-text: #000000; --warning-lighten-text: #000000; --info-text: #FFFFFF; --info-dark-text: #FFFFFF; --info-darken-text: #FFFFFF; --info-light-text: #000000; --info-lighten-text: #000000;  --display1-font: 'Golos Text', sans-serif; --display2-font: 'Golos Text', sans-serif; --display4-font: 'Golos Text', sans-serif; --display5-font: 'Golos Text', sans-serif; --display7-font: 'Golos Text', sans-serif;}
+.cid-uxk8jD0QWW {
+  display: flex;
+  background-image: url("images/freepik__expand__61135.png");
+}
+.cid-uxk8jD0QWW .row {
+  justify-content: center;
+}
+
+/* Стили для модального окна */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
