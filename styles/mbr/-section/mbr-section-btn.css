@@ -1,0 +1,10 @@
+.mbr-section-btn {
+  margin-left: -0.6rem;
+  margin-right: -0.6rem;
+  font-size: 0;
+}
+.mbr-section-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
