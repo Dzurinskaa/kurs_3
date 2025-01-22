@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вкусная Атмосфера</title>
+
+
+  <link rel="stylesheet" href="https://ai.mobirise.com/assets/startm5/bootstrap/css/bootstrap-grid.min.css?v=m3frcrn2">
+  <link rel="stylesheet" href="https://ai.mobirise.com/assets/startm5/bootstrap/css/bootstrap-reboot.min.css?v=m3frcrn2">
+
+
+<!-- Шрифты-->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;700&display=swap"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;700&display=swap"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;700&display=swap"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;700&display=swap"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Brygada+1918:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Brygada+1918:wght@400;700&display=swap"></noscript>
+  <link rel="stylesheet" href="https://ai-builder.mobirise.com/api/v2/themes/startm5-next/additional.css?v=0Tg50PK5XtpL3E-AsAXeYA&backgroundColor=%23FFEEE6&primaryColor=%23FFBE0B&secondaryColor=%238338EC&successColor=%2322B571&infoColor=%230BACCC&warningColor=%23D7A100&dangerColor=%23B7202E&mainFont=Golos%20Text&display1Font=Golos%20Text&display1Size=5&display2Font=Golos%20Text&display2Size=4&display5Font=Golos%20Text&display5Size=2.5&display7Font=Golos%20Text&display7Size=1.4&display4Font=Golos%20Text&display4Size=1.2&isRoundedImages=true&isRoundedButtons=true&isLargeButtons=true&isGhostButtonBorder=true&underlinedLinks=false&isAnimatedOnScroll=false&isScrollToTopButton=false" type="text/css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;700&display=swap"></noscript>
+  
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f8f8;
+        color: #333;
+    }
+  
+    .gallery-section {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+  
+    .gallery-section h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 2rem;
+        color: #4A2029;
+    }
+  
+    .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+    }
+  
+    .gallery-item {
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+    }
+  
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+  
+    .gallery-item img:hover {
+        transform: scale(1.1);
+    }
+  
+    /* Modal styles */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    }
+  
+    .modal img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 10px;
+    }
+  
+    .modal .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+  
+    .modal .close:hover {
+        color: #bbb;
+    }
+  </style>
+</head>
+<body>
+ <!-- Меню -->  
+  <section class="menu cid-uxk8jD0frN">
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+      <div class="container">
+        <div class="navbar-brand">
+          <span class="navbar-logo">
+            <img src="images/logo.png" alt="" style="height: 4.3rem;">
+          </span>
+          <span class="navbar-caption-wrap">
+            <a class="navbar-caption text-black display-4" href="#">ВкуснаяАтмосфера</a>
+          </span>
+        </div>
+        <ul class="header-menu">
+          <li class="header-menu-item mbr-fonts-style display-5">
+            <a href="Главная.html" class="text-white">Главная</a>
+          </li>
+          <li class="header-menu-item mbr-fonts-style display-5">
+            <a href="Меню.html" class="text-white">Меню</a>
+          </li>
+          <li class="header-menu-item mbr-fonts-style display-5">
+            <a href="Отзывы.html" class="text-white">Отзывы</a>
+          </li>
+          <li class="header-menu-item mbr-fonts-style display-5">
+            <a href="Новости.html" class="text-white">Новости</a>
+          </li>
+          <li class="header-menu-item mbr-fonts-style display-5">
+            <a href="Контакты.html" class="text-white">Контакты</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+  
+
+<!-- Начало странички -->
+<section class=" cid-uxk8jD0QWW mbr-fullscreen mbr-parallax-background" id="hero-17-uxk8jD0QWW">
+  <div class="mbr-overlay" style="opacity: 0.2; background-color: rgb(0, 0, 0);"></div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="content-wrap col-12 col-md-10">
+        <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-4 display-1">
+          <strong>Вкусная Атмосфера</strong>
+        </h1>
+        <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7">Погрузитесь в мир гастрономического наслаждения и веселья!</p>
+      </div>
+    </div>
+  </div>
+</section>
+  
+
+<div class="gallery-section">
+  <h1>О НАС</h1>
+  <div class="gallery-container">
+      <!-- Add image paths below -->
+      <div class="gallery-item"><img src="images/g1.jpg" alt=""></div>
+      <div class="gallery-item"><img src="images/g2.jpg" alt=""></div>
+      <div class="gallery-item"><img src="images/g3.jpg" alt=""></div>
+      <div class="gallery-item"><img src="images/g4.jpg" alt=""></div>
+      <div class="gallery-item"><img src="images/g5.jpg" alt=""></div>
+      <div class="gallery-item"><img src="images/g6.jpg" alt=""></div>
+      <div class="gallery-item"><img src="images/g7.jpg" alt=""></div>
+      <div class="gallery-item"><img src="images/g8.jpg" alt=""></div>
+      <div class="gallery-item"><img src="images/g9.jpg" alt=""></div>
+      <div class="gallery-item"><img src="images/g10.jpg" alt=""></div>
+  </div>
+</div>
+
+
+
+<script>
+  // Modal functionality
+  const modal = document.getElementById('imageModal');
+  const modalImage = document.getElementById('modalImage');
+
+  function openModal(src) {
+      modal.style.display = 'flex';
+      modalImage.src = src;
+  }
+
+  function closeModal() {
+      modal.style.display = 'none';
+  }
+</script>
+
+
+<!-- Бронирование -->
+<section class="header09 startm5 cid-uxk8jD0bny" id="call-to-action-2-uxk8jD0bny">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="content-wrap col-12 col-md-6">
+        <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-4 display-2">
+          <strong>Забронируйте свой столик сейчас!</strong>
+        </h1>
+        <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7">
+          Не упустите шанс насладиться нашими блюдами!
+        </p>
+        <div class="mbr-section-btn">
+          <a class="btn btn-primary display-7" id="open-modal" href="#">Забронировать</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Всплывающее окно с формой бронирования -->
+<div id="booking-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" id="close-modal">&times;</span>
+    <h2>Форма бронирования</h2>
+    <form id="booking-form">
+      <label for="booking-date">Дата:</label>
+      <input type="date" id="booking-date" required>
+
+      <label for="booking-time">Время:</label>
+      <input type="time" id="booking-time" min="09:00" max="22:00" required>
+
+      <label for="guests">Количество гостей:</label>
+      <input type="number" id="guests" min="1" max="20" required>
+
+      <label for="table-type">Тип стола:</label>
+      <select id="table-type" required>
+        <option value="" disabled selected>Выберите тип стола</option>
+        <option value="standard">Стандартный</option>
+        <option value="vip">VIP</option>
+        <option value="outdoor">На улице</option>
+      </select>
+
+      <button type="submit" class="btn btn-success">Подтвердить бронирование</button>
+    </form>
+  </div>
+</div>
+
+
+<!-- Подвал-меню -->
+<section class="footer3 cid-uxk8jD5JIm" id="footer-6-uxk8jD5JIm">
+    <div class="container">
+        <div class="row">
+            <div class="row-links">
+              <ul class="header-menu">
+                <li class="header-menu-item mbr-fonts-style display-5">
+                  <a href="Главная.html" class="text-white">Главная</a>
+                </li>
+                <li class="header-menu-item mbr-fonts-style display-5">
+                  <a href="Меню.html" class="text-white">Меню</a>
+                </li>
+                <li class="header-menu-item mbr-fonts-style display-5">
+                  <a href="#hero-17-uxk8jD0QWW" class="text-white">Бронирование</a>
+                </li>
+                <li class="header-menu-item mbr-fonts-style display-5">
+                  <a href="Отзывы.html" class="text-white">Отзывы</a>
+                </li>
+                <li class="header-menu-item mbr-fonts-style display-5">
+                  <a href="Новости.html" class="text-white">Новости</a>
+                </li>
+                <li class="header-menu-item mbr-fonts-style display-5">
+                  <a href="Контакты.html" class="text-white">Контакты</a>
+                </li>
+              </ul>
+              </div>
+            <div class="col-12 mt-4">
+              
+                <p class="mbr-fonts-style copyright display-7">
+                    © 2025. Джуринская Алина
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://ai.mobirise.com/assets/startm5/parallax/jarallax.js?v=m3frcrn2"></script>
+  <script src="https://ai.mobirise.com/assets/startm5/bootstrap/js/bootstrap.bundle.min.js?v=m3frcrn2"></script>
+  <script src="https://ai.mobirise.com/assets/startm5/dropdown/js/navbar-dropdown.js?v=m3frcrn2"></script>
+  <script src="https://ai.mobirise.com/assets/startm5/scrollgallery/scroll-gallery.js?v=m3frcrn2"></script>
+  <script src="https://ai.mobirise.com/assets/startm5/mbr-switch-arrow/mbr-switch-arrow.js?v=m3frcrn2"></script>
+  <script src="https://ai.mobirise.com/assets/startm5/smoothscroll/smooth-scroll.js?v=m3frcrn2"></script>
+  <script src="https://ai.mobirise.com/assets/startm5/ytplayer/index.js?v=m3frcrn2"></script>
+  <script src="https://ai.mobirise.com/assets/startm5/theme/js/script.js?v=m3frcrn2"></script>
+  <script src="https://ai.mobirise.com/assets/startm5/formoid/formoid.min.js?v=m3frcrn2"></script>
+  <script src="https://ai.mobirise.com/assets/preview.js"></script>
+  
+  <script src="script_b.js"></script>
+</body>
+</html>
