@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Десерты</title>
+    <link rel="stylesheet" href="styles_m/styles.css">
+</head>
+<body>
+    <a href="Меню.html" class="redirect-button">Вернуться</a>
+
+    <!-- Фильтрация и поиск в одном блоке -->
+    <div class="filter-container">
+        <div>
+            <label for="searchInput">Поиск блюд:</label>
+            <input type="text" id="searchInput" placeholder="Введите название или ингредиент">
+            <button id="searchButton">Найти</button>
+        </div>
+        <div>
+            <label for="minPrice">Мин. цена:</label>
+            <input type="number" id="minPrice" placeholder="Например, 100">
+            
+            <label for="maxPrice">Макс. цена:</label>
+            <input type="number" id="maxPrice" placeholder="Например, 120">
+            
+            <button id="filterButton">Применить фильтр</button>
+        </div>
+    </div>
+
+    <section class="menu-container">
+        <div class="menu-card" data-price="25">
+            <img src="images/Аффогато.png" alt="Аффогато">
+            <h3 class="menu-title">Аффогато</h3>
+            <p class="menu-description">Шоколадная стружка, взбитые сливки, печенье.</p>
+            <p class="menu-details">Калорийность: 240 Ккал.<br> 100 г</p>
+            <div class="menu-footer">
+                <span class="menu-price">25 Р</span>
+                <button class="menu-button">🛒</button>
+            </div>
+        </div>
+        <div class="menu-card" data-price="25">
+            <img src="images/ПаннаКотта.png" alt="Панна Котта">
+            <h3 class="menu-title">Панна Котта</h3>
+            <p class="menu-description">Вишня, клубника, сахар, желатин, молоко, сливки, ванилин.</p>
+            <p class="menu-details">Калорийность: 160 Ккал.<br>150 г</p>
+            <div class="menu-footer">
+                <span class="menu-price">25 Р</span>
+                <button class="menu-button">🛒</button>
+            </div>
+        </div>
+        <div class="menu-card" data-price="25">
+            <img src="images/ТортПавлова.png" alt="Торт Павлова">
+            <h3 class="menu-title">Торт Павлова</h3>
+            <p class="menu-description">Клубника, черника, сахарная пудра, молоко, сливки, ваниль, творожный сыр.</p>
+            <p class="menu-details">Калорийность: 195 Ккал.<br> 300 г</p>
+            <div class="menu-footer">
+                <span class="menu-price">25 Р</span>
+                <button class="menu-button">🛒</button>
+            </div>
+        </div>
+        
+
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

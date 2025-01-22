@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Горячее</title>
+    <link rel="stylesheet" href="styles_m/styles.css">
+</head>
+<body>
+    <a href="Меню.html" class="redirect-button">Вернуться</a>
+
+    <!-- Фильтрация и поиск в одном блоке -->
+    <div class="filter-container">
+        <div>
+            <label for="searchInput">Поиск блюд:</label>
+            <input type="text" id="searchInput" placeholder="Введите название или ингредиент">
+            <button id="searchButton">Найти</button>
+        </div>
+        <div>
+            <label for="minPrice">Мин. цена:</label>
+            <input type="number" id="minPrice" placeholder="Например, 100">
+            
+            <label for="maxPrice">Макс. цена:</label>
+            <input type="number" id="maxPrice" placeholder="Например, 120">
+            
+            <button id="filterButton">Применить фильтр</button>
+        </div>
+    </div>
+
+    <section class="menu-container">
+        <div class="menu-card" data-price="112">
+            <img src="images/Люля-кебаб.png" alt="Люля-кебаб">
+            <h3 class="menu-title">Люля-кебаб</h3>
+            <p class="menu-description">Рубленая баранина, лук, курдюк, черный перец, томаты, петрушка.</p>
+            <p class="menu-details">Калорийность: 1100 Ккал.<br>15 см / 450 г</p>
+            <div class="menu-footer">
+                <span class="menu-price">112 Р</span>
+                <button class="menu-button">🛒</button>
+            </div>
+        </div>
+        <div class="menu-card" data-price="99">
+            <img src="images/ФранцузскийОмлет.png" alt="Французский омлет">
+            <h3 class="menu-title">Французский омлет</h3>
+            <p class="menu-description">Яйца, сливочное масло, черный перец, петрушка, укроп.</p>
+            <p class="menu-details">Калорийность: 1030 Ккал.<br>15 см / 400 г</p>
+            <div class="menu-footer">
+                <span class="menu-price">99 Р</span>
+                <button class="menu-button">🛒</button>
+            </div>
+        </div>
+        <div class="menu-card" data-price="103">
+            <img src="images/Цыпленок.png" alt="Цыпленок">
+            <h3 class="menu-title">Цыпленок</h3>
+            <p class="menu-description">Бекон, куриные бедра и голени, измельчанные томаты, шампиньоны, лавровый лист.</p>
+            <p class="menu-details">Калорийность: 2050 Ккал.<br>15 см / 450 г</p>
+            <div class="menu-footer">
+                <span class="menu-price">103 Р</span>
+                <button class="menu-button">🛒</button>
+            </div>
+        </div>
+
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
